@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  base: process.env.NODE_ENV === 'production' ? '/vue_game/' : '/', // 更新为正确的仓库名
+  base: '/',  // 改为根路径
   build: {
     outDir: 'dist'
   }
