@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  base: '/',  // 改为根路径
+  base: process.env.NODE_ENV === 'production' ? '/treasure-hunt-vue/' : '/',
   build: {
     outDir: 'dist'
   }
