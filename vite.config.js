@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  base: '/treasure-hunt-vue/', // 确保这一行存在
+  base: process.env.NODE_ENV === 'production' ? '/vue_game/' : '/', // 更新为正确的仓库名
   build: {
     outDir: 'dist'
   }

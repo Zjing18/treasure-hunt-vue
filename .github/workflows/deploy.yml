@@ -17,6 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Debug info
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Working directory:"
+          pwd
+          ls -la
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -28,6 +35,13 @@ jobs:
       
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: production
+      
+      - name: Check build output
+        run: |
+          echo "Build output:"
+          ls -la dist/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
