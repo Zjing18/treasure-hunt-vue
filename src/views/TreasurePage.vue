@@ -33,7 +33,7 @@
     <!-- 音频元素 -->
     <audio 
       ref="audioPlayer"
-      src="/audio/a5.mp3"
+      src="/audio/a4.mp3"
       loop
       @ended="handleAudioEnded"
     ></audio>
